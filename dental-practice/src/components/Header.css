@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #0077CC; /* Or any other color you prefer */
+}
+
+.logo-container img {
+  height: 50px; /* Adjust according to your logo */
+}
+
+.nav-menu a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+}

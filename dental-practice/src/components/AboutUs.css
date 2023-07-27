@@ -1,0 +1,29 @@
+/* AboutUs.css */
+
+.about-us {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.about-image {
+  flex: 1;
+}
