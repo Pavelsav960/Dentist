@@ -1,19 +1,26 @@
 import React from 'react';
 import './Header.css'; // Assuming you will use CSS for styling. Create a Header.css file in the same folder.
+import shidentLogo from '../assets/shidentLogo.jpg';
 
 const Header = () => (
     <header className="header">
         <div className="logo-container">
-            {/* Replace with your actual logo */}
-            <img src="logo.png" alt="Dad's Dental Practice" />
+            <img src={shidentLogo} alt="Dad's Dental Practice" />
         </div>
-        <nav className="nav-menu">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div className="menu-container">
+            <nav className="nav-menu">
+                <a href="#about">עלינו</a>
+                <a href="#services">סוגי טיפולים</a>
+                <a href="#testimonials">המלצות</a>
+                <a href="#contact">צרו קשר</a>
+            </nav>
+        </div>
+        <div className="call-container">
+            <a href="tel:1234567890" className="call-button">חייגו עכשיו</a>
+        </div>
     </header>
 );
+
+
 
 export default Header;

@@ -1,36 +1,85 @@
-#testimonials {
-  padding: 3rem 0;
-  background-color: #f5f5f5;
+.testimonials-section {
+  text-align: center;
+  padding: 1rem 2rem 6rem 2rem; /* Top Right Bottom Left */
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0; /* Add a top border for separation */
 }
 
-.testimonials-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+.testimonials-section h2 {
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .testimonial-card {
-  width: 300px;
-  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.07);
-  border-radius: 4px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
+  padding: 2rem; /* Increased padding */
+  background-color: #007BFF; /* Change this to the specific shade of blue you're using */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  max-width: 800px; /* Increased maximum width */
+  margin: auto; /* Center the card */
+  color: #fff; /* White text color to contrast the blue background */
+  cursor: grab;
+  height: 150px;
 }
 
-.testimonial-card blockquote {
-  font-size: 1.25rem;
-  color: #333;
-  margin-bottom: 1rem;
+.testimonial-card h3 {
+  margin-top: 1rem;
+  color: #fff; /* White text color to contrast the blue background */
+  font-size: 1.5rem; /* Increased font size */
 }
 
 .testimonial-card p {
-  font-size: 1rem;
-  color: #666;
-  text-align: right;
-  width: 100%;
+  color: #fff; /* White text color to contrast the blue background */
+  font-size: 1.25rem; /* Increased font size */
+  border-radius: 25px; /* Increase this to make the corners more round */
+  
 }
+
+.slick-next:before, .slick-prev:before {
+  color: #333;
+}
+
+.slick-dots li button:before {
+  color: #333;
+}
+
+
+/* Media query for screens smaller than 800px */
+@media (max-width: 800px) {
+  .testimonial-card {
+    max-width: 100%; /* Make the card take up the full width of its container on small screens */
+    padding: 1rem; /* Reduce padding on small screens */
+  }
+
+  .testimonial-card h3 {
+    font-size: 1.25rem; /* Reduce font size on small screens */
+  }
+
+  .testimonial-card p {
+    font-size: 1rem; /* Reduce font size on small screens */
+  }
+}
+
+
+.testimonials-section h2 {
+  font-size: 2.5rem; /* Increased font-size */
+  color: #333;
+  text-align: center;
+  margin-bottom: 3rem; /* Lessen the gap between the line and the text */
+}
+
+.testimonials-section h2 span {
+  position: relative;
+  display: inline-block;
+}
+
+.testimonials-section h2 span:after {
+  content: '';
+  position: absolute;
+  left: -10%; /* adjust this value to move the line horizontally */
+  bottom: -5px; /* adjust this value to move the line vertically */
+  width: 120%; /* adjust this value to increase/decrease the width of the line */
+  border-bottom: 3px solid #007BFF; /* Increased the thickness */
+  
+}
+

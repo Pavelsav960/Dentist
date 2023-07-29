@@ -1,31 +1,107 @@
 .hero {
-  background: url('../assets/happyClient.jpg') no-repeat center center;
+  /* Set the image as a background */
+  background: url('../assets/happyClient.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  height: 60vh; /* Set the height to the full viewport height */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  color: white; /* Set the text color to white for better visibility */
+  position: relative; /* Add this */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Gradient from transparent to black */
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.8));
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: right;
+  padding: 1rem;
+  max-width: 50%;
+  animation: slideInRight 1.5s;
+  margin-right: 5rem; /* Increase this to move the text, bullet points and button to the left */
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2rem; /* Decrease this */
+  font-weight: bold;
   color: #fff;
-  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.hero-text h2 {
+  font-size: 2rem;
+  margin-top: -0.2rem; /* Add this */
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+.hero-bullet-points {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.4rem;
+  color: #ddd;
+  padding-right: 1.5em;  /* Adjust as per your design */
+  margin-right: 2rem; /* Adjust this to move the bullet points to the left */
 }
 
-.hero-btn {
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  color: #333;
-  border: none;
-  cursor: pointer;
+.hero-bullet-points li {
+  margin-bottom: 0.5rem;
+  padding-left: -10rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  position: relative;  /* Add this */
+}
+
+.hero-bullet-points li::after { /* Changed ::before to ::after */
+  content: '•';  /* You can use any symbol or even an image here */
+  position: absolute;
+  right: -1.5em;  /* Adjust as per your design */
+  color: #007BFF;  /* You can choose any color that matches your design */
+  font-size: 1.2em;  /* Adjust as per your design */
+}
+
+
+
+.appointment-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #007BFF;
+  color: white;
   text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

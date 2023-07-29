@@ -1,20 +1,43 @@
 import React from 'react';
-import './Testimonials.css'; // Importing the corresponding CSS file
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import './Testimonials.css';
 
 const Testimonials = () => {
+    const testimonials = [
+        {
+            name: 'John Doe',
+            testimonial: 'This is an excellent clinic with the best staff.'
+        },
+        {
+            name: 'Eduard Kalminski',
+            testimonial: 'מקום נחמד, נקי, העובדים סופר מקצועים! הרופא התקשר פעמיים אחרי הטיפול של כירורג ושאל איך אני מרגיש וגם בעל המקום התקשר וענה לשאלות . לא פגשתי יחס כזה בשום מקום. גם גישה נוחה , יש תחבורה ציבורית וחניה לרכבים בסביבה'
+        },
+        // add more testimonials as needed
+    ];
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+    };
+
     return (
-        <section id="testimonials">
-            <h2 className="section-title">What Our Patients Say</h2>
-            <div className="testimonials-container">
-                <div className="testimonial-card">
-                    <blockquote>
-                        "This is the best dental practice I've ever been to. The staff are friendly and the services are top notch."
-                    </blockquote>
-                    <p>- Patient's Name</p>
-                </div>
-                {/* Add more testimonials as needed */}
-            </div>
-        </section>
+        <div className="testimonials-section">
+            <h2><span>המלצות</span></h2>
+            <Slider {...settings}>
+                {testimonials.map((item, index) => (
+                    <div key={index} className="testimonial-card">
+                        <p>{item.testimonial}</p>
+                        <h3> {item.name}</h3>
+                    </div>
+                ))}
+            </Slider>
+        </div>
     );
 }
 

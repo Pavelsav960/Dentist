@@ -2,16 +2,92 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #0077CC; /* Or any other color you prefer */
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px #00000029;
+  flex-direction: row-reverse; 
+}
+
+.logo-container, .call-container {
+  display: flex;
+  align-items: center;
 }
 
 .logo-container img {
-  height: 50px; /* Adjust according to your logo */
+  height: 4rem;
+  width: auto;
+}
+
+.menu-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  direction: rtl; /* Added this line */
 }
 
 .nav-menu a {
-  margin-left: 20px;
-  color: #fff;
+  color: #333333;
   text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.2rem; /* Increased font size */
+}
+
+.nav-menu a {
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.2rem; /* Increased font size */
+  position: relative; /* Add this line */
+}
+
+.nav-menu a:hover {
+  color: #007BFF;
+}
+
+.nav-menu a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #007BFF;
+  transition: width .3s, left .3s;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+  left: 0;
+  transition: width .3s, left .3s;
+}
+
+
+.call-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem; /* Increased font size */
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+  .nav-menu a {
+    font-size: 1rem; /* Decrease font size on small screens */
+  }
+
+  .call-button {
+    font-size: 1rem; /* Decrease font size on small screens */
+  }
 }

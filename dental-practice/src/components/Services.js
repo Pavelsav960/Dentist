@@ -4,7 +4,7 @@ import './Services.css'; // Importing the corresponding CSS file
 const Services = () => {
     return (
         <section id="services">
-            <h2 className="section-title">Our Services</h2>
+            <h2 className="section-title">הטיפולים שלנו</h2>
             <div className="services-container">
                 <div className="service-card">
                     <div className="service-icon">

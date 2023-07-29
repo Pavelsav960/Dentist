@@ -1,29 +1,51 @@
-/* AboutUs.css */
-
 .about-us {
-  padding: 2rem 0;
-  background-color: #f9f9f9;
+  padding: 2rem 0; 
+  background-color: #fff; /* Change this to the desired color */
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;  /* Adjust as needed */
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1rem;
+  display: flex;  /* Add this */
+  justify-content: center;  /* Add this */
 }
 
 .about-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2rem;
+  display: flex; 
+  align-items: center; 
+  gap: 2rem;
+  margin-top: 1rem;
+  width: 70%;  /* Add this */
+  max-width: 1000px;  /* Add this */
+  margin: auto;  /* Add this */
 }
 
-.about-text {
-  flex: 1;
-  margin-right: 2rem;
-}
 
 .about-image {
-  flex: 1;
+  flex: 0 0 300px;
+  max-width: 100%;
+  height: auto;
+  order: 1; /* This is the default value */
+  align-self: center;  /* Add this */
+}
+.about-image img {
+  width: 100%;
+  border-radius: 5px; /* Optional - makes the image edges round */
+}
+
+
+.about-text {
+  direction: rtl; /* This will correctly align the Hebrew text */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  order: -1; /* This will move the text before the image */
+  text-align: justify; /* Add this */
+}
+
+h2 {
+  direction: rtl; /* This will correctly align the Hebrew title */
+  color: #007BFF; /* Change this to the desired color */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }

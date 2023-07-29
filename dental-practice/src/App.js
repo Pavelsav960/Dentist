@@ -5,6 +5,7 @@ import AboutUs from './components/AboutUs';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
 
 
 
@@ -16,6 +17,7 @@ const App = () => (
         <Services/>
         <Testimonials/>
         <ContactUs/>
+        <Footer/>
         {/* other components will go here */}
     </div>
 );
